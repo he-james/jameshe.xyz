@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    {% if title %}
+      <title>{{ title }} - James He</title>
+    {% else %}
+      <title>jameshe.xyz - James He</title>
+    {% endif %}
+
+    {% if description %}
+      <meta name="description" content="{{ description }}">
+    {% else %}
+      <meta name="description" content="James He's personal website, portfolio, and blog.">
+    {% endif %}
+
+    <link rel="stylesheet" href="/static/css/bulma.css">
+    <script src="/static/js/burger.js"></script>
+    {% block html_head %}{% endblock %}
+  </head>
+
+  <body>
+    <nav class="navbar is-transparent is-warning is-spaced" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://jameshe.xyz/">
+            <strong>James He @ jameshe.xyz</strong>
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="https://jameshe.xyz/blog">Blog</a>
+            <a class="navbar-item" href="https://jameshe.xyz/portfolio">Portfolio</a>
+            <a class="navbar-item" href="https://jameshe.xyz/about-me">About Me</a>
+          </div>
+          <div class="navbar-end">
+            <a class="navbar-item" href="https://github.com/he-james/jameshe.xyz">This site is on&nbsp;<strong>Github</strong>!</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="section">
+      {% block content %}{% endblock %}
+    </div>
+
+    <footer id="footer">
+      <div class="content has-text-centered">
+        {% block footer %}
+        <p>&copy; Copyright 2020 by <a href="www.jameshe.xyz">James He</a>
+          <br>
+          View my <a href="www.github.com/he-james">Github</a></p>
+        {% endblock %}
+      </div>
+    </footer>
+  </body>
+</html>
