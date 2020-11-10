@@ -25,12 +25,14 @@
 
   <body>
     <div class="wrapper">
-      <nav class="navbar is-transparent is-warning is-spaced" role="navigation" aria-label="main navigation">
+      <nav class="navbar is-transparent is-warning is-spaced has-centered-text" role="navigation" aria-label="main navigation">
         <div class="container">
           <div class="navbar-brand">
-            <a class="navbar-item" href="/">
-              <strong>James He @ jameshe.xyz</strong>
-            </a>
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/blog">
+                <strong>James He's Blog</strong>
+              </a>
+            </div>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
@@ -38,14 +40,11 @@
             </a>
           </div>
           <div class="navbar-menu" id="navMenu">
-            <div class="navbar-start">
-              <a class="navbar-item" href="/blog">Blog</a>
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+              <a class="navbar-item" href="/">Home</a>
               <a class="navbar-item" href="/portfolio">Portfolio</a>
               <a class="navbar-item" href="/about-me">About Me</a>
               <a class="navbar-item" href="/contact">Contact</a>
-            </div>
-            <div class="navbar-end">
-              <a class="navbar-item" href="https://github.com/he-james/jameshe.xyz">This site is on&nbsp;<strong>Github</strong>!</a>
             </div>
           </div>
         </div>

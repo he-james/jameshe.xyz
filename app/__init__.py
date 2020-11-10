@@ -20,10 +20,12 @@ def not_found(err):
 
 # Import a module / component using its blueprint handler variable (mod_auth)
 from app.controllers.portfolio_controller import portfolio
+from app.controllers.blog_controller import blog
 
 
 # Register blueprint(s)
 app.register_blueprint(portfolio)
+app.register_blueprint(blog)
 
 
 # Build the database:

@@ -1,11 +1,16 @@
+{% extends "portfolio/portfolio-base.html" %}
+
+{% block content %}
+
 {% macro render_field(field, placeholder=None) %}
 {% if field.errors %}
 <div>
-{% elif field.flags.error %}
-<div>
+  {% elif field.flags.error %}
+</div>
 {% else %}
-<div>
+<div></div>
 {% endif %}
+<div>
     {% set css_class = 'form-control ' + kwargs.pop('class', '') %}
     {{ field(class=css_class, placeholder=placeholder, **kwargs) }}
 </div>
@@ -45,3 +50,4 @@
     </form>
   </div>
 </div>
+ {% endblock content %}
